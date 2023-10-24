@@ -1,5 +1,15 @@
-.imgCarrito{
+.propCarrito img{
     width: 5rem;
-    height: 5rem;
+    height: 5rem;   
+}
+.propCarrito{
+    color: white;
+    text-align: left;
+    text-align: center;
     margin-right: 5rem;
+    font-weight: bold;
+}
+.logo{
+    width: 5rem;
+    height: 5rem;   
 }
