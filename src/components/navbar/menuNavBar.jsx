@@ -1,16 +1,13 @@
 import { NavBarItems } from "./navBarItems"
 import { NavBarSubItems } from "./navBarSubItems"
-import { NavLogo } from "./navLogo"
+
 
 
 export const MenuNavBar = () => {
     return (
     <> 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
-        <>
-        <NavLogo></NavLogo>
-        </>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,7 +30,7 @@ export const MenuNavBar = () => {
           </ul>
         </div>
       </div>
-    </nav>  
+      
  
     </>
   )
