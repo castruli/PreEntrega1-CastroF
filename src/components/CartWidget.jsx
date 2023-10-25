@@ -5,7 +5,7 @@ export const CartWidget = () => {
     return (
         <div className="propCarrito">
         <img src={imagenCarrito} alt="Logo proyecto" />
-        <CartCounter counter={0}></CartCounter>
+        <CartCounter counter={11}></CartCounter>
         </div>
     )
 }
