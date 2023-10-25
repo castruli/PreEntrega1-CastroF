@@ -3,7 +3,7 @@ import { CartCounter } from './navbar/cartcounter'
 
 export const CartWidget = () => {
     return (
-        <div class="propCarrito">
+        <div className="propCarrito">
         <img src={imagenCarrito} alt="Logo proyecto" />
         <CartCounter counter={0}></CartCounter>
         </div>

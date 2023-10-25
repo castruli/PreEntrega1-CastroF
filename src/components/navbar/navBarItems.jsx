@@ -1,7 +1,7 @@
 export const NavBarItems = ({text}) => {
     return (
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">{text}</a>
+        <li className="nav-item">
+        <a className="nav-link active" aria-current="page" href="#">{text}</a>
         </li>
     )
 }

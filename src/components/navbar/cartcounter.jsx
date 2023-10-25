@@ -1,6 +1,6 @@
 export const CartCounter = (props) => {
     return (
-        <div class="counter">{props.counter}
+        <div className="counter">{props.counter}
     
         </div>
     )
