@@ -1,6 +1,6 @@
-export const Geeting = () => {
+export const ItemListContainer = (props) => {
 return (
-<h1>¡Bienvenidos al sitio!</h1>
+<h1>{props.greeting}</h1>
 )
 }
 

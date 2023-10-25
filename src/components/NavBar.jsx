@@ -1,6 +1,5 @@
-import { MenuNavBar } from "./navbar/menuNavBar";
-
-import { NavLogo } from "./navbar/navLogo";
+import { MenuNavBar } from "./navbar/MenuNavBar";
+import { NavLogo } from "./navbar/NavLogo";
 import { CartWidget } from "./CartWidget";
 
 
@@ -13,10 +12,7 @@ return (
     <MenuNavBar></MenuNavBar>
     <CartWidget></CartWidget>
     </>
-    </nav>
-
-
-    
+    </nav>  
     </>
 )
 }

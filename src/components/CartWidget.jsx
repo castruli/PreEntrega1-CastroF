@@ -1,5 +1,5 @@
 import imagenCarrito from '../components/image/carritoCompras.png'
-import { CartCounter } from './navbar/cartcounter'
+import { CartCounter } from './navbar/Cartcounter'
 
 export const CartWidget = () => {
     return (
