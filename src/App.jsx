@@ -2,13 +2,16 @@
 import './App.css'
 import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer'
+import { CardList } from "./components/CardList"
+
 
 function App() {
   
   return (
     <>      
-    <NavBar></NavBar>
+    <NavBar/>
     <ItemListContainer greeting="¡Bienvenidos a TuEscabio.com!"/>
+    <CardList/>
     </>
   )
 }
