@@ -14,3 +14,13 @@
     height: 5rem;   
     margin-right:15rem;
 }
+.displayCard{   
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.card{
+    margin: 1%;
+    width: 30%;
+    
+}

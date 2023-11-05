@@ -1,9 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+
 export const CardItem = ({product}) => {
-  return (
-    <Card className='m-2' style={{ width: '18rem' }}>
+  return (    
+    <Card className='card'>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>{product.product_name}</Card.Title>
@@ -14,6 +15,7 @@ export const CardItem = ({product}) => {
         <Button variant="dark">Agregar al carrito</Button>
       </Card.Body>
     </Card>
+ 
   );
 }
 

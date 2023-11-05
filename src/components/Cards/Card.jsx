@@ -4,7 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 export const Menu = ({product, loading}) => {
     return (
-        <Container>
+        <Container className="displayCard">
             <>
             {loading ? ( <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>

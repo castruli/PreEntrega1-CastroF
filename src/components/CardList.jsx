@@ -4,7 +4,7 @@ import dataProduct from "./dataProduct/dataProduct.json"
 
 export const CardList = () => {
 
-  const [product, setProduct] = useState([])
+  	const [product, setProduct] = useState([])
 	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
