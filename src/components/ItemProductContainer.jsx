@@ -1,22 +1,28 @@
 import { useState, useEffect } from "react"
+import { ItemDetail } from "./Cards/ItemDetail"
 import dataProduct from "./dataProduct/dataProduct.json"
 import { useParams } from "react-router-dom"
-// import { ItemsDescription } from "./Cards/ItemsDescription"
-import { ItemsMasInfo } from "./Cards/ItemsMasInfo"
-import Spinner from 'react-bootstrap/Spinner';
-
 
 export const ItemProductContainer = () => {
 
-  	const [productId, setProductId] = useState()
-	const {id} = useParams ()
+  	const [product, setProduct] = useState([])
+	const [loading, setLoading] = useState(true)
+	const {categoryID} = useParams ()
 
 	useEffect(() => {
-        setProductId (dataProduct.find(filterProduct => filterProduct.id === Number(id)))}, [id]) 
-        if (!productId) return (<Spinner/>)
+		if (categoryID) {
+		const filterCategoryByID = dataProduct.filter(
+		filterProduct => filterProduct.category === categoryID)
+		setProduct (filterCategoryByID)
+		setLoading (false)}
+		else {
+		const openMenu = new Promise(resolve =>
+		setTimeout(() => resolve(dataProduct), 2000))
+		openMenu.then(dataProduct => setProduct(dataProduct)).finally(() => setLoading(false))
+	}},[categoryID])
 
-
+ 
   return (
-      <ItemsMasInfo product={productId}/>
+      <ItemDetail product={product} loading={loading}/>
   )
 }

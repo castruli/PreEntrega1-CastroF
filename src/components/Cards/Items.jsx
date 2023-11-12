@@ -11,7 +11,7 @@ export const Items = ({product}) => {
         {/* <Card.Subtitle className="mb-2 text-muted">   {product.descripcion}</Card.Subtitle> */}
         <Card.Text className='costStyle'>{product.price}</Card.Text>
         <Button variant="dark">Agregar al carrito</Button>
-        <Link to={`/products/${product.id}`}>
+        <Link to={`/items/${product.id}`}>
         <Button variant="dark">Más informacion</Button>
         </Link>
       </Card.Body>
