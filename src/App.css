@@ -1,3 +1,6 @@
+body{ background-color: gray;
+}
+
 .propCarrito img{
     width: 5rem;
     height: 5rem;   
@@ -21,6 +24,26 @@
 }
 .card{
     margin: 1%;
-    width: 30%;
-    
+    width: 30%;   
+}
+.costStyle{
+    text-align: right;
+    font-weight: bold;
+}
+.imgSlice{
+    width: 240px;
+    height: 360px;
+}
+
+.carousel{
+    text-align: center;
+    background-color: gray;
+    color: black;
+}
+h1{
+    text-align: center;
+    background-color: gray;
+    color: black;
+    padding-top: 2%; 
+    padding-bottom: 2%;
 }
