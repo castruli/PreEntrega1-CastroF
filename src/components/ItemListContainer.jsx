@@ -6,7 +6,7 @@ return (
     <>
     <Carousels/>
     <h1>{props.greeting}</h1>
-    <ItemProductContainer></ItemProductContainer>
+    <ItemProductContainer/>
 
    
     </>

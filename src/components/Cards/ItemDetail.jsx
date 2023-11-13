@@ -6,7 +6,7 @@ export const ItemDetail = ({product, loading}) => {
     return (
         <Container className="displayCard">
             <>
-            {loading ? ( <Spinner animation="border" role="status">
+            {loading ? ( <Spinner animation="grow" variant="dark" role="status">
                         <span className="visually-hidden">Cargando...</span>
                         </Spinner>) :
                         ( product.map(product => <Items key={product.id} product={product}/>)

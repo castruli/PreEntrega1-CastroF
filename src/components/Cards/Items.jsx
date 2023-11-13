@@ -8,12 +8,13 @@ export const Items = ({product}) => {
       <Card.Img variant="top" src={product.picture} />
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
-        {/* <Card.Subtitle className="mb-2 text-muted">   {product.descripcion}</Card.Subtitle> */}
         <Card.Text className='costStyle'>{product.price}</Card.Text>
+        <div className='btnCards'> 
         <Button variant="dark">Agregar al carrito</Button>
         <Link to={`/items/${product.id}`}>
         <Button variant="dark">Más informacion</Button>
         </Link>
+        </div>
       </Card.Body>
     </Card>
  

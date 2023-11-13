@@ -16,7 +16,7 @@ export const NavBar = () => {
    <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-        <NavLogo></NavLogo>
+        <NavLogo/>
           <Nav className="me-auto">
           <NavLink className={"nav-link"} to="/">
             <span>Home</span>
@@ -26,14 +26,8 @@ export const NavBar = () => {
             <span>{category}</span>
             </NavLink>
             ))}
-   
-            {/* <NavDropdown  title="Bebidas" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Vinos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Aperitivos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">B. Blancas</NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
-          <CartWidget></CartWidget>
+          <CartWidget/>
         </Container>
       </Navbar>
     </>
