@@ -2,7 +2,7 @@ import { Items } from "./Items";
 import { Container } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 
-export const ItemDetail = ({product, loading}) => {
+export const ItemList = ({product, loading}) => {
     return (
         <Container className="displayCard">
             <>

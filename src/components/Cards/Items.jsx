@@ -10,14 +10,13 @@ export const Items = ({product}) => {
         <Card.Title>{product.title}</Card.Title>
         <Card.Text className='costStyle'>{product.price}</Card.Text>
         <div className='btnCards'> 
-        <Button variant="dark">Agregar al carrito</Button>
+        {/* <Button variant="dark">Agregar al carrito</Button> */}
         <Link to={`/items/${product.id}`}>
         <Button variant="dark">Más informacion</Button>
         </Link>
         </div>
       </Card.Body>
     </Card>
- 
   );
 }
 

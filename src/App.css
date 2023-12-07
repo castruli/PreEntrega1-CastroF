@@ -52,3 +52,9 @@ h1{
     display: flex;
     justify-content: center;
 }
+#custom{
+    flex-direction: row;
+}
+#customb{
+    padding-left: 10%;
+}
