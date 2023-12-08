@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {getFirestore, getDoc, doc} from "firebase/firestore"
 import { ItemDetail } from "./Cards/ItemDetail"
-// import Spinner from 'react-bootstrap/Spinner';
+import Spinner from 'react-bootstrap/Spinner';
 // import { Container } from 'react-bootstrap';
 // import Card from 'react-bootstrap/Card';
 
@@ -26,8 +26,8 @@ export const ItemDetailContainer = ()=> {
 	  },[id]);
 
     return (
-   		// console.log(items)
-		<ItemDetail items={item}/>
+   		item ? <ItemDetail item={item}/>
+      : <Spinner></Spinner>
 
   )
 }

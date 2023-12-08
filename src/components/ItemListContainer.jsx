@@ -1,37 +1,31 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import { ItemList } from "./Cards/ItemList"
-// import dataProduct from "./dataProduct/dataProduct.json"
 import { useParams } from "react-router-dom"
-// import { CartContext } from "../contexts/CartContext"
 import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
 export const ItemListContainer = (props) => {
-
   	const [items, setItems] = useState([]);
 	const {categoryId} = useParams ();
-	console.log(categoryId)
-	
+	const [loading, setLoading] = useState(true) 
 
 
 	useEffect (() => {
-		const db = getFirestore ();
-		
+		const db = getFirestore ();		
 		const refCollection = !categoryId
-		? collection (db, "items")
-		: query(collection(db, "items"), where("categoryId","==", categoryId));	
+							  ? collection (db, "items")
+							: query(collection(db, "items"), where("categoryId","==", categoryId));	
 		getDocs(refCollection).then ((snapshot) => {
-		if (snapshot.size === 0) console.log("no results");
-		else setItems(snapshot.docs.map((doc)=>{
-		return{ id: doc.id, ...doc.data()};
-		}));
+			if (snapshot.size === 0) console.log("no results");
+			else setItems(snapshot.docs.map((doc)=>{
+				return{ id: doc.id, ...doc.data()};
+			}));
 		});
-		}, [categoryId]);
-		
+	}, [categoryId]);
  
   return (
 		<>
 		  <h1>{props.greeting}</h1>
-		<ItemList items={items} />
+			<ItemList items={items} />
 		
 		</>
       
@@ -40,7 +34,6 @@ export const ItemListContainer = (props) => {
 // loading={loading}
 
 
-	// const [loading, setLoading] = useState(true) 
 	// const {categoryID} = useParams ()
 
 	// useEffect(() => {
