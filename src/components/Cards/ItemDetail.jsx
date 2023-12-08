@@ -11,14 +11,14 @@ export const ItemDetail = ({item}) => {
     onAdd(item, quantity)}
 
   return (   
-    <Container>
+    <Container className='text-center'>
     <Card className='card'>
       <Card.Img variant="top" src={item.picture} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{item.descripcion}</Card.Subtitle>
-        <Card.Text className='costStyle'>Precio {item.price}</Card.Text>
-        <Card.Text className='costStyle'>Stock {item.stock}</Card.Text>
+        <Card.Text className='costStyle'>Precio: $ {item.price}</Card.Text>
+        <Card.Text className='costStyle'>Stock: {item.stock} unidades</Card.Text>
         <ItemCounter onAdd={add} initial={1} stock={item.stock}/>
       </Card.Body>
     </Card>

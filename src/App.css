@@ -17,10 +17,14 @@
 .displayCard{   
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 1%;
-    width: 30%;   
+    width: 30%; 
 }
 .costStyle{
     text-align: right;
@@ -49,12 +53,28 @@ h1{
     justify-content: space-between;
 }
 .btnInfo{
-    display: flex;
-    justify-content: center;
+ text-align: center;
 }
 #custom{
     flex-direction: row;
 }
 #customb{
     padding-left: 10%;
+}
+.remove{
+    color: red;
+    background-color: black;
+}
+#form{
+    display: flex;
+    justify-content: center;
+}
+#table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+    margin-left: 30%;
+    margin-right: 30%;
 }

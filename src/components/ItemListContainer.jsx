@@ -6,8 +6,6 @@ import {getFirestore, collection, getDocs, query, where} from "firebase/firestor
 export const ItemListContainer = (props) => {
   	const [items, setItems] = useState([]);
 	const {categoryId} = useParams ();
-	const [loading, setLoading] = useState(true) 
-
 
 	useEffect (() => {
 		const db = getFirestore ();		
@@ -21,12 +19,12 @@ export const ItemListContainer = (props) => {
 			}));
 		});
 	}, [categoryId]);
+		
  
   return (
 		<>
 		  <h1>{props.greeting}</h1>
 			<ItemList items={items} />
-		
 		</>
       
   )
@@ -34,6 +32,7 @@ export const ItemListContainer = (props) => {
 // loading={loading}
 
 
+	// const [loading, setLoading] = useState(true) 
 	// const {categoryID} = useParams ()
 
 	// useEffect(() => {

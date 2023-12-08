@@ -3,11 +3,6 @@ import { useParams } from "react-router-dom"
 import {getFirestore, getDoc, doc} from "firebase/firestore"
 import { ItemDetail } from "./Cards/ItemDetail"
 import Spinner from 'react-bootstrap/Spinner';
-// import { Container } from 'react-bootstrap';
-// import Card from 'react-bootstrap/Card';
-
-
-// import { CountButton } from './CountButton';
 
 
 export const ItemDetailContainer = ()=> {
@@ -15,11 +10,8 @@ export const ItemDetailContainer = ()=> {
   const {id} = useParams ();
 
   useEffect (() => {
-	  
     const db = getFirestore ();
-
 	  const refDoc = doc(db, "items", id);
-
 	  getDoc(refDoc).then ((snapshot) => {
 	  setItem({id: snapshot.id, ...snapshot.data() });
 	  });  
@@ -32,11 +24,3 @@ export const ItemDetailContainer = ()=> {
   )
 }
 
-
-
-//recupero de un items solo => a  utilizar en ItmesDetails
-
-
-	// useEffect(() => {
-  //       setProductId (dataProduct.find(filterProduct => filterProduct.id === Number(id)))}, [id]) 
-  //       if (!productId) return (<Spinner/>)

@@ -2,12 +2,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { NavBar } from './components/NavBar'
-// import {ItemDetailContainer} from './components/ItemDetailContainer'
 import {ItemListContainer} from './components/ItemListContainer'
 // import {Carousels } from './components/Carousels'
 import { CartProvider } from './contexts/CartContext'
 import {Cart} from './components/Cart'
-// import { ItemsMasInfo } from './components/Cards/ItemsMasInfo'
 import { ItemDetailContainer } from './components/ItemDetailContainer'
 function App() {
   

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 
+
 export const CartWidget = () => {
     const { itemsContext} = useContext(CartContext);
     const total = itemsContext.reduce((acumulador,valorActual) => acumulador + valorActual.quantity , 0 );

@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 export const Items = ({items}) => {
-  // console.log(items.id)
 
   return (    
     <Card className='card'>
@@ -12,9 +11,8 @@ export const Items = ({items}) => {
         <Card.Title>{items.title}</Card.Title>
         <Card.Text className='costStyle'>$ {items.price}</Card.Text>
         <div className='btnCards'> 
-        {/* <Button variant="dark">Agregar al carrito</Button> */}
         <Link to={`/items/${items.id}`}>
-        <Button variant="dark">Más informacion</Button>
+        <Button variant="dark">Más información</Button>
         </Link>
         </div>
       </Card.Body>
