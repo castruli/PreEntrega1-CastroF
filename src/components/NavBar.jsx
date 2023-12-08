@@ -7,8 +7,8 @@ import { CartWidget } from "./navbar/CartWidget";
 import dataProduct from "./dataProduct/dataProduct.json"
 import { NavbarCollapse } from 'react-bootstrap';
 
-const categoryFilter = dataProduct.map( item => item.category )
-const categoriesNavBar = new Set(categoryFilter)
+// const categoryFilter = dataProduct.map( item => item.category )
+// const categoriesNavBar = new Set(categoryFilter)
 
 
 
@@ -28,11 +28,20 @@ export const NavBar = () => {
           <NavLink className={"nav-link"} id='customb' to="/">
             <span>Home</span>
             </NavLink>
-            {[...categoriesNavBar].map(category => (
+            <NavLink className={"nav-link"} id='customb' to="category/Ron">
+            <span>Ron</span>
+            </NavLink>
+            <NavLink className={"nav-link"} id='customb' to="category/Whisky">
+            <span>Whisky</span>
+            </NavLink>
+            <NavLink className={"nav-link"} id='customb' to="category/Cerveza">
+            <span>Cerveza</span>
+            </NavLink>
+            {/* {[...categoriesNavBar].map(category => (
             <NavLink  className={"nav-link"} id='customb' key={category} to={`/category/${category}`}>
             <span>{category}</span>
             </NavLink>
-            ))}
+            ))} */}
         </Nav>
       <CartWidget>
       </CartWidget>

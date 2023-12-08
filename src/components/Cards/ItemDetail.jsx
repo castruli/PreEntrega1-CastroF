@@ -1,13 +1,17 @@
 import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import { CountButton } from './CountButton';
+import { ItemCounter } from './ItemCounter';
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 
 
-export const ItemsMasInfo = ({items}) => {
-    const item = {...items}
 
+
+export const ItemDetail = ({item}) => {
+  const {onAdd} = useContext(CartContext);  
+  const add = (quantity) => {
+    onAdd(item, quantity)}
+  
   return (   
     // console.log(item) 
     <Container>
@@ -19,7 +23,7 @@ export const ItemsMasInfo = ({items}) => {
         <Card.Text className='costStyle'>Precio {item.price}</Card.Text>
         <Card.Text className='costStyle'>Stock {item.stock}</Card.Text>
 
-       <CountButton items={item} stock={item.stock}/>        
+        <ItemCounter onAdd={add} initial={1} stock={item.stock}/>
 
        
       </Card.Body>

@@ -1,32 +1,19 @@
-import { Card, Container } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import Table from 'react-bootstrap/Table';
 
 
 export const Cart = () => {
-  const { items, clear} = useContext(CartContext);
-  console.log(items)
+  const { itemsContext, clear} = useContext(CartContext);
+  console.log(itemsContext)
 
-  const total = items.reduce((acumulador,valorActual) => acumulador + valorActual.price , 0 );
+  // const total = itemsContext.reduce((acumulador,valorActual) => acumulador + valorActual.price , 0 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if (items.length === 0){
-  return <div>no hay elementos</div>
-}   
+  if (itemsContext.length === 0){
+    return <div>no hay elementos</div>
+  }   
+console.log(itemsContext);
   //  const items = [
   //   {
   //     id:2,
@@ -62,9 +49,9 @@ if (items.length === 0){
           <th>Eliminar</th>
         </tr>
       </thead>
-      <tbody>
-        {items?.map((item) =>(
-        <tr key={item.id}>
+        {itemsContext?.map((item) =>(
+        <tbody>    
+          <tr key={item.id}>
           <td>{item.quantity}</td>
           <td>{item.title}</td>
           <td>{item.price}</td>
@@ -75,12 +62,12 @@ if (items.length === 0){
 
           </td>
         </tr>
-        ))}
       </tbody>
-      <div>
+        ))}
+      {/* <div>
         <button>Total: $ {total}</button>
         
-      </div>
+      </div> */}
     </Table> 
 
  <button onClick={clear} >clear</button>
